@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Залізна Конфедерація</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap');
+
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Oswald', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px 40px;
+      border-bottom: 3px solid #c00;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #c00;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #f44;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 25px;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff6666;
+      text-decoration: underline;
+    }
+    main {
+      padding: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #c00;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      letter-spacing: 1.2px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.15rem;
+      color: #ddd;
+    }
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 15px 20px;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 2px solid #c00;
+    }
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+    .language-switcher a {
+      margin-left: 10px;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .language-switcher a:hover {
+      color: #f44;
+    }
+    .social-links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #f44;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .social-links a:hover {
+      text-decoration: underline;
+      color: #ff6666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="site-title">Залізна Конфедерація</h1>
+    <nav>
+      <a href="#main" id="nav-main">Головна</a>
+      <a href="#about" id="nav-about">Про нас</a>
+      <a href="#articles" id="nav-articles">Статті</a>
+      <a href="#structure" id="nav-structure">Долучитись</a>
+    </nav>
+    <div class="language-switcher">
+      <a onclick="setLanguage('uk')">UA</a>
+      <a onclick="setLanguage('en')">EN</a>
+      <a onclick="setLanguage('pt')">PT</a>
+      <a onclick="setLanguage('ru')">RU</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="main">
+      <h2 id="main-heading">Головна</h2>
+      <p id="main-text">Останні новини та ініціативи міжнародного руху "Залізна Конфедерація".</p>
+    </section>
+
+    <section id="structure">
+      <h2>Долучитись</h2>
+      <div class="social-links">
+        <a href="https://t.me" target="_blank">Telegram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footer-text">&copy; 2025 Залізна Конфедерація — Всі права захищені</span>
+  </footer>
+
+  <script>
+    const translations = {
+      uk: {
+        title: "Залізна Конфедерація",
+        navMain: "Головна",
+        navAbout: "Про нас",
+        navArticles: "Статті",
+        navStructure: "Долучитись",
+        mainHeading: "Головна",
+        mainText: "Останні новини та ініціативи міжнародного руху "Залізна Конфедерація".",
+        footer: "© 2025 Залізна Конфедерація — Всі права захищені"
+      },
+      en: {
+        title: "Iron Confederation",
+        navMain: "Home",
+        navAbout: "About Us",
+        navArticles: "Articles",
+        navStructure: "Join Us",
+        mainHeading: "Home",
+        mainText: "Latest news and initiatives of the international movement 'Iron Confederation'.",
+        footer: "© 2025 Iron Confederation — All rights reserved"
+      },
+      pt: {
+        title: "Confederação de Ferro",
+        navMain: "Início",
+        navAbout: "Sobre nós",
+        navArticles: "Artigos",
+        navStructure: "Junte-se a nós",
+        mainHeading: "Início",
+        mainText: "Últimas notícias e iniciativas do movimento internacional 'Confederação de Ferro'.",
+        footer: "© 2025 Confederação de Ferro — Todos os direitos reservados"
+      },
+      ru: {
+        title: "Железная Конфедерация",
+        navMain: "Главная",
+        navAbout: "О нас",
+        navArticles: "Статьи",
+        navStructure: "Присоединиться",
+        mainHeading: "Главная",
+        mainText: "Последние новости и инициативы международного движения 'Железная Конфедерация'.",
+        footer: "© 2025 Железная Конфедерация — Все права защищены"
+      }
+    };
+
+    function setLanguage(lang) {
+      const t = translations[lang];
+      document.getElementById('site-title').innerText = t.title;
+      document.getElementById('nav-main').innerText = t.navMain;
+      document.getElementById('nav-about').innerText = t.navAbout;
+      document.getElementById('nav-articles').innerText = t.navArticles;
+      document.getElementById('nav-structure').innerText = t.navStructure;
+      document.getElementById('main-heading').innerText = t.mainHeading;
+      document.getElementById('main-text').innerText = t.mainText;
+      document.getElementById('footer-text').innerText = t.footer;
+    }
+  </script>
+</body>
+</html>
